@@ -5,6 +5,10 @@ import store from './store'
 import './plugins/element.js'
 // 导入全局css样式
 import './assets/css/global.css'
+import treeTable from 'vue-table-with-tree-grid'
+
+
+
 import axios from 'axios'
 //配置axios
 
@@ -18,6 +22,10 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http=axios
 
 Vue.config.productionTip = false
+
+
+
+Vue.component('tree-table',treeTable)
 
 new Vue({
   router,
